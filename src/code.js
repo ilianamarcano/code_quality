@@ -35,7 +35,7 @@ class Login {
     }
 
     removeUser(user) {
-        const index = this.idx(user, this.users);
+        const index = this.users.indexOf(user);
         this.users[index] = null;
         this.passwords[index] = null;
         this.users = this.users.filter(user => user !== null);
@@ -43,7 +43,7 @@ class Login {
     }
 
     checkPassword(user, password) {
-        const index = this.idx(user, this.users);
+        const index = this.users.indexOf(user);
         const passwordCorrect = this.passwords[index] === password;
         return passwordCorrect;
     }
@@ -57,7 +57,7 @@ class Login {
             }
         }
         if (user1 === user) {
-            let index = this.idx(user, this.users);
+            let index = this.users.indexOf(user);
             if (this.passwords[index] === oldPassword) {
                 this.passwords[index] = newPassword;
                 return true;
@@ -67,22 +67,10 @@ class Login {
     }
 
     login(user, password) {
-        let index = this.idx(user, this.users);
+        let index = this.users.indexOf(user);
         if (this.passwords[index] === password) {
             this.sessions.push(user);
         }
-    }
-
-    // Gets index of an element in an array
-    idx(element, array) {
-        let cont = 0;
-        for (let i of array) {
-            if (i === element) {
-                return cont;
-            }
-            cont += 1;
-        }
-        return cont;
     }
 }
 
