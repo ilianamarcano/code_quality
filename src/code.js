@@ -18,7 +18,7 @@ class Login {
                 this.sessions[i] = null;
             }
         });
-        this.sessions = this.sessions.filter(session => sesssion !== null);
+        this.sessions = this.sessions.filter(session => session !== null);
     }
 
     // Checks if user exists
@@ -35,7 +35,7 @@ class Login {
     }
 
     removeUser(user) {
-        let index = this.idx(user, this.users);
+        const index = this.idx(user, this.users);
         this.users[index] = null;
         this.passwords[index] = null;
         this.users = this.users.filter(user => user !== null);
@@ -43,8 +43,8 @@ class Login {
     }
 
     checkPassword(user, password) {
-        let index = this.idx(user, this.users);
-        let passwordCorrect = this.passwords[index] === password;
+        const index = this.idx(user, this.users);
+        const passwordCorrect = this.passwords[index] === password;
         return passwordCorrect;
     }
 
