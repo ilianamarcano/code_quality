@@ -1,0 +1,30 @@
+{
+  "name": "code_quality",
+  "version": "1.0.0",
+  "description": "improving the code",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilianamarcano/code_quality.git"
+  },
+  "keywords": [
+    "comparaonline"
+  ],
+  "author": "iliana marcano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilianamarcano/code_quality/issues"
+  },
+  "homepage": "https://github.com/ilianamarcano/code_quality#readme",
+  "dependencies": {
+    "eslint": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
